@@ -1,6 +1,7 @@
 # Azure
 Azure Samples for simple Java App
 
+https://docs.microsoft.com/en-gb/azure/app-service/containers/quickstart-java
 https://shell.azure.com/?prompt=True
 
 mvn archetype:generate "-DgroupId=example.demo" "-DartifactId=helloworld" "-DarchetypeArtifactId=maven-archetype-webapp" -Dversion=1.0-SNAPSHOT
