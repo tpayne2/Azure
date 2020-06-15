@@ -25,7 +25,7 @@
         <version>1.9.1</version>
         <configuration>
           <schemaVersion>V2</schemaVersion>
-          <resourceGroup>Test_Deployment</resourceGroup>
+          <resourceGroup>ResourceGroup_Test</resourceGroup>
           <appName>testapptestdeployment</appName>
           <pricingTier>P1v2</pricingTier>
           <region>westeurope</region>
