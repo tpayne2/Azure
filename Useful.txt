@@ -1,0 +1,4 @@
+# Query using AZ
+
+# Get all keyvaults with publicAccess enabled
+az graph query -q "Resources | where type =~ 'microsoft.keyvault/vaults' and properties.publicNetworkAccess =~ 'Enabled' | project name | order by name asc"
