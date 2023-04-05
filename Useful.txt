@@ -1,5 +1,7 @@
 # Query using AZ
 
-# Get all keyvaults with publicAccess enabled
+# Get all keyvaults  & storage Acccounts with publicAccess enabled
 
-az graph query -q "Resources | where type =~ 'microsoft.keyvault/vaults' and properties.publicNetworkAccess =~ 'Enabled' | project name | order by name asc"
+az graph query -q "Resources | where type =~ 'microsoft.keyvault/vaults' and properties.publicNetworkAccess =~ 'Enabled' | project name, type | order by name asc" \
+&& \
+az graph query -q "Resources | where type =~ 'Microsoft.Storage/storageAccounts' and properties.publicNetworkAccess =~ 'Enabled' | project name, type | order by name asc"
