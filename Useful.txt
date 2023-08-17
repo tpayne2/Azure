@@ -5,3 +5,6 @@
 az graph query -q "Resources | where type =~ 'microsoft.keyvault/vaults' and properties.publicNetworkAccess =~ 'Enabled' | project name, type | order by name asc" \
 && \
 az graph query -q "Resources | where type =~ 'Microsoft.Storage/storageAccounts' and properties.publicNetworkAccess =~ 'Enabled' | project name, type | order by name asc"
+
+# Query resources 
+az graph query -q "resources | summarize count() by ['type']" -o table
