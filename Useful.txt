@@ -8,3 +8,7 @@ az graph query -q "Resources | where type =~ 'Microsoft.Storage/storageAccounts'
 
 # Query resources 
 az graph query -q "resources | summarize count() by ['type']" -o table
+
+az graph query -q "resources | project name, type, location | summarize count() by location, type"
+az graph query -q "resources | project name, type, location | order  by location, type"
+
